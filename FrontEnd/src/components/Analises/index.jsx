@@ -22,13 +22,14 @@ export default function SessaoComentarios() {
 
         if (token) {
             const resp = await api.get('/post/avaliacao');
+            console.log("Resp logado:", resp.data);
             setArr(resp.data.slice(0, 6));
         }
 
         if (!token) {
-            const resp = await api.get('/post/avaliacao/deslogado')
-            console.log(resp.data)
-            setArr(resp.data.slice(0, 6))
+            const resp = await api.get('/post/avaliacao/deslogado');
+            console.log("Resp deslogado:", resp.data);
+            setArr(resp.data.slice(0, 6));
         }
     }
 
