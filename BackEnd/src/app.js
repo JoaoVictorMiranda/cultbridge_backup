@@ -6,7 +6,7 @@ const api = express();
 
 
 
-app.use(cors({
+api.use(cors({
     origin: ['http://localhost:5173']
 }));
 
