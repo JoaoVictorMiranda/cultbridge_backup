@@ -1,0 +1,18 @@
+.ContainerBusca {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 2.5vh;
+    align-items: center;
+    background-color: black;
+
+    .ResultadosBusca {
+        display: flex;
+        align-items: baseline;
+        flex-direction: column;
+        width: 60%;
+        text-align: justify;
+        gap: 3vh;
+    }
+}

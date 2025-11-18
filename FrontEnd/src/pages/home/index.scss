@@ -1,0 +1,290 @@
+.container_home {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: transparent;
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)), 
+                  url('../../assets/images/fundo.png');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  
+  
+  .container_highlights {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70vh;
+    align-items: center;
+    padding-top: 2vh;
+    color: white;
+    background: linear-gradient(to bottom, transparent 100%, black);
+    
+    .highlights_content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 60%;
+      height: 50vh;
+
+      .highlights_title {
+        display: flex;
+        flex-direction: row;
+        gap: 2vh;
+        align-items: center;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+
+        h1, h3 {
+          color: white;
+        }
+      }
+
+      .menu-categorias {
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+      }
+
+    }
+
+    .carrossel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 60vh;
+      
+      .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .movie_render {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50.5vh;
+        flex-direction: column;
+        
+        #Posteres {
+          box-shadow: 2px 2px 6px black;
+          height: 60%;
+        }
+        
+        .alinhador {
+          display: flex;
+          flex-direction: row;
+          margin-top: 1vh;
+          align-items: center;
+          justify-content: center;
+          gap: 2vh;
+          
+          .lado_esquerdo {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 50%;
+            gap: 1vh;
+          }
+          
+          .lado_direito {
+            display: flex;
+            gap: 1vh;
+            width: 50%;
+            align-items: center;
+          }
+        }
+      }
+      
+      .swiper-slide:active {
+        cursor: grabbing;
+      }
+      
+      .swiper-button-prev,
+      .swiper-button-next {
+        display: none;
+        color: black;
+      }
+
+      .swiper-pagination-bullet {
+        display: none;
+        flex-direction: column;
+        background: black;
+      }
+
+      .swiper-pagination-bullet:active {
+        display: none;
+        background: gray;
+      }
+    }
+  }
+
+  .container_reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 5vh 0;
+    gap: 2vh;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, white 100%);
+
+    .container_reviews_content {
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+
+      .reviews_title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 10vh;
+        flex-direction: column;
+      }
+
+      .bloco_vermelho {
+        display: flex;
+        width: 20%;
+        height: 10%;
+        border-radius: 0.5vh;
+        background-color: #AA2522;
+      }
+
+      .review {
+        display: flex;
+        width: 70%;
+        height: 30vh;
+        flex-direction: row;
+        align-self: center;
+
+        .lado_esquerdo {
+          display: flex;
+          width: 25%;
+
+          img {
+            min-width: 100%;
+            min-height: 100%;
+          }
+        }
+
+        .lado_direito {
+          display: flex;
+          width: 75%;
+
+          .camada1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            height: 5vh;
+
+            .perfil {
+              display: flex;
+              width: 70%;
+              justify-self: left;
+              align-self: baseline;
+              height: 5vh;
+              align-items: center;
+              padding-left: 2vh;
+              gap: 1vh;
+            }
+
+            h3 {
+              min-width: 45%;
+            }
+
+            img {
+              width: 15%;
+              height: 100%;
+              cursor: pointer;
+            }
+
+            .review_content {
+              display: flex;
+              width: 100%;
+              text-align: justify;
+              padding-left: 2vh;
+              padding-right: 2vh;
+            }
+
+            #Estrela {
+              width: 9% !important;
+              height: 50%;
+            }
+          }
+
+          .interacao {
+            display: flex;
+            width: 100%;
+
+            .lado_esquerdo {
+              display: flex;
+              padding-left: 2vh;
+              width: 25%;
+              height: 4.3vh;
+              gap: 1vh;
+              align-items: center;
+            }
+
+            .lado_central {
+              display: flex;
+              width: 16%;
+              gap: 1vh;
+              align-items: center;
+              padding: 1vh;
+              height: 4.3vh;
+            }
+
+            .lado_direito {
+              display: flex;
+              padding-left: 2vh;
+              width: 50%;
+              height: 4.3vh;
+              gap: 1vh;
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
+
+    .botao_carregar {
+      display: flex;
+      justify-content: center;
+      width: 60%;
+      height: 5vh;
+      padding: 5vh;
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 0.3vh #F3A712 solid;
+        outline: none;
+        border-radius: 5vh;
+        background-color: #F3A712;
+        width: 30%;
+        height: 4.5vh;
+        cursor: pointer;
+        font-size: 2vh;
+        transition: all 0.5s;
+      }
+
+      button:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}

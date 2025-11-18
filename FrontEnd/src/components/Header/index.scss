@@ -1,0 +1,536 @@
+.container_header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+  padding: 1rem 2rem;
+  position: relative;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  width: 100%;
+
+  .overlay-carregando {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(4px);
+  }
+
+  .menu_hamburguer {
+    display: none;
+  }
+
+  .container_nav {
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+
+      li {
+        a {
+          text-decoration: none;
+          color: #495057;
+          font-weight: 500;
+          font-size: 0.95rem;
+          padding: 0.5rem 1rem;
+          border-radius: 4px;
+          transition: all 0.3s ease;
+          letter-spacing: 0.5px;
+
+          &:hover {
+            background-color: #e9ecef;
+            color: #212529;
+          }
+        }
+      }
+    }
+  }
+
+  .header_login {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.1);
+      z-index: 998;
+      display: none;
+    }
+
+    .caixa_pesquisa {
+      position: relative;
+      z-index: 999;
+
+      .input_pesquisa {
+        background-color: #ffffff;
+        border: 1px solid #dee2e6;
+        border-radius: 20px;
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+        color: #495057;
+        transition: all 0.3s ease;
+        width: 250px;
+        outline: none;
+
+        &:focus {
+          border-color: #adb5bd;
+          box-shadow: 0 0 0 2px rgba(173, 181, 189, 0.1);
+        }
+
+        &::placeholder {
+          color: #6c757d;
+        }
+
+        &.sumido {
+          display: none;
+        }
+      }
+    }
+
+    .pesquisa {
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 50%;
+      padding: 0.4rem;
+      width: 24px;
+      height: 24px;
+
+      &:hover {
+        background-color: #e9ecef;
+        transform: scale(1.1);
+      }
+    }
+
+    a {
+      text-decoration: none;
+
+      h3 {
+        color: #495057;
+        font-weight: 500;
+        font-size: 0.95rem;
+        margin: 0;
+        padding: 0.6rem 1.2rem;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+        background-color: #ffffff;
+        border: 1px solid #dee2e6;
+        white-space: nowrap;
+
+        &:hover {
+          background-color: #e9ecef;
+          color: #212529;
+        }
+      }
+    }
+
+    .container_perfil {
+      position: relative;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      .perfil_trigger {
+        display: flex;
+        align-items: center;
+        padding: 0.6rem 1.2rem;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+        background-color: #ffffff;
+        border: 1px solid #dee2e6;
+        white-space: nowrap;
+
+        &:hover {
+          background-color: #e9ecef;
+          color: #212529;
+        }
+
+        .nome_usuario {
+          color: #495057;
+          font-weight: 500;
+          font-size: 0.95rem;
+          margin: 0;
+          max-width: 120px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+
+      .menu_perfil {
+        position: absolute;
+        top: 110%;
+        right: 0;
+        background-color: #dcdcdc;
+        border-radius: 14px;
+        border: 2px solid #6a0b0b;
+        width: 240px;
+        padding: 1.5rem 1rem;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        .perfil_info {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 0.8rem;
+
+          .foto_perfil {
+            width: 60px;
+            height: 60px;
+            background-color: #2d2d2d;
+            border-radius: 50%;
+            border: 2px solid #6a0b0b;
+          }
+
+          .nome_perfil_menu {
+            font-weight: 600;
+            font-size: 1rem;
+            color: #000;
+          }
+        }
+
+        .divisor {
+          width: 100%;
+          height: 1px;
+          background-color: #6a0b0b;
+          margin: 0.5rem 0;
+        }
+
+        .menu_item {
+          width: 80%;
+          text-decoration: none;
+          font-weight: 600;
+          font-size: 0.9rem;
+          padding: 0.6rem 1rem;
+          border-radius: 20px;
+          border: none;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          text-align: center;
+
+          &:hover {
+            transform: scale(1.05);
+          }
+
+          &:not(.logout) {
+            background-color: #6a0b0b;
+            color: #fff;
+
+            &:hover {
+              background-color: #4e0606;
+            }
+          }
+
+          &.logout {
+            background-color: white;
+            color: #000;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-top: 0.5rem;
+            
+            &:hover {
+              background-color: #6c757d;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .container_header {
+    padding: 1rem 1.5rem;
+    
+    .container_nav {
+      ul {
+        gap: 1.5rem;
+        
+        li {
+          a {
+            font-size: 0.9rem;
+            padding: 0.4rem 0.8rem;
+          }
+        }
+      }
+    }
+
+    .header_login {
+      gap: 1.2rem;
+
+      .caixa_pesquisa {
+        .input_pesquisa {
+          width: 220px;
+        }
+      }
+
+      a {
+        h3 {
+          font-size: 0.9rem;
+          padding: 0.5rem 1rem;
+        }
+      }
+
+      .container_perfil {
+        .perfil_trigger {
+          .nome_usuario {
+            max-width: 100px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .container_header {
+    padding: 1rem;
+    gap: 1rem;
+
+    .menu_hamburguer {
+      display: block;
+      order: 1;
+
+      .hamburguer {
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border-radius: 6px;
+        padding: 0.3rem;
+        width: 50px;
+        height: 50px;
+
+        &:hover {
+          background-color: #e9ecef;
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    .container_nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-top: 1px solid #e9ecef;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+      z-index: 1000;
+
+      &.menu_aberto {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 1rem;
+
+        li {
+          a {
+            display: block;
+            font-size: 0.9rem;
+            padding: 0.8rem 1rem;
+            text-align: center;
+            border: 1px solid #e9ecef;
+            margin-bottom: 0.5rem;
+            border-radius: 6px;
+
+            &:hover {
+              background-color: #f8f9fa;
+            }
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .header_login {
+      order: 2;
+      gap: 1rem;
+      margin-left: auto;
+
+      .overlay {
+        display: block;
+      }
+
+      .caixa_pesquisa {
+        .input_pesquisa {
+          width: 180px;
+          font-size: 0.85rem;
+        }
+      }
+
+      .pesquisa {
+        width: 22px;
+        height: 22px;
+      }
+
+      a {
+        h3 {
+          font-size: 0.85rem;
+          padding: 0.5rem 0.8rem;
+        }
+      }
+
+      .container_perfil {
+        .perfil_trigger {
+          .nome_usuario {
+            max-width: 80px;
+            font-size: 0.85rem;
+          }
+        }
+
+        .menu_perfil {
+          right: -10px;
+          width: 220px;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 480px) {
+  .container_header {
+    padding: 0.8rem;
+    gap: 0.8rem;
+
+    .menu_hamburguer {
+      .hamburguer {
+        width: 40px;
+        height: 40px;
+        padding: 0.2rem;
+      }
+    }
+
+    .container_nav {
+      ul {
+        padding: 0.8rem;
+
+        li {
+          a {
+            font-size: 0.85rem;
+            padding: 0.7rem 0.8rem;
+          }
+        }
+      }
+    }
+
+    .header_login {
+      gap: 0.8rem;
+
+      .caixa_pesquisa {
+        .input_pesquisa {
+          width: 140px;
+          padding: 0.5rem 1rem;
+          font-size: 0.8rem;
+        }
+      }
+
+      .pesquisa {
+        width: 20px;
+        height: 20px;
+        padding: 0.3rem;
+      }
+
+      a {
+        h3 {
+          font-size: 0.8rem;
+          padding: 0.5rem 0.8rem;
+          min-width: 60px;
+          text-align: center;
+        }
+      }
+
+      .container_perfil {
+        .perfil_trigger {
+          padding: 0.5rem 0.8rem;
+          
+          .nome_usuario {
+            max-width: 60px;
+            font-size: 0.8rem;
+          }
+        }
+
+        .menu_perfil {
+          width: 200px;
+          right: -15px;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 360px) {
+  .container_header {
+    padding: 0.6rem;
+
+    .header_login {
+      gap: 0.6rem;
+
+      .caixa_pesquisa {
+        .input_pesquisa {
+          width: 120px;
+          padding: 0.4rem 0.8rem;
+        }
+      }
+
+      a {
+        h3 {
+          font-size: 0.75rem;
+          padding: 0.4rem 0.6rem;
+          min-width: 50px;
+        }
+      }
+
+      .container_perfil {
+        .perfil_trigger {
+          padding: 0.4rem 0.6rem;
+          
+          .nome_usuario {
+            max-width: 50px;
+            font-size: 0.75rem;
+          }
+        }
+
+        .menu_perfil {
+          width: 180px;
+        }
+      }
+    }
+  }
+}

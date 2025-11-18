@@ -1,0 +1,90 @@
+.JanelaFlutuante {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.452);
+    backdrop-filter: blur(1px);
+    z-index: 999;
+
+    .Alinhador {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: fixed;
+        top: 50%;
+        bottom: 50%;
+        width: 50vh;
+        height: auto;
+        border-radius: 1vh;
+        align-self: center;
+        justify-self: center;
+        background-color: white;
+
+        header {
+            display: flex;
+            align-items: center;
+            padding: 2vh;
+            width: 100%;
+            font-size: 2vh;
+            height: 5vh;
+            border-radius: 1vh 1vh 0vh 0vh;
+            background-color: #A32522;
+
+            h3 {
+                color: white;
+            }
+        }
+
+        .Conteudo {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding-top: 2vh;
+            flex-direction: column;
+
+            .Botoes {
+                display: flex;
+                justify-content: flex-end;
+                padding-right: 1vh;
+                padding-top: 2vh;
+                width: 100%;
+                padding-bottom: 1vh;
+                gap: 1vh;
+
+                #Cancelar:hover {
+                    background-color: #D4D4D4;
+                }
+
+                #Cancelar {
+                    background-color: #E5E5E5;
+                    color: black;
+                }
+
+                button {
+                    display: flex;
+                    width: 30%;
+                    align-items: center;
+                    justify-content: center;
+                    height: 4.5vh;
+                    margin-right: 1vh;
+                    border-radius: 1vh;
+                    outline: none;
+                    color: white;
+                    font-weight: 500;
+                    border: none;
+                    cursor: pointer;
+                    background-color: #A32522;
+                    transition: all 0.5s;
+                }
+
+                button:hover {
+                    background-color: #960101;
+                }
+            }
+
+        }
+    }
+
+}

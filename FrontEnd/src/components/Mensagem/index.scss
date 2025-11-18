@@ -1,0 +1,60 @@
+.MensagemComentario {
+    display: flex;
+    min-height: 10vh;
+    max-width: auto;
+    background-color: white;
+    border-radius: 1vh;
+
+    .FotoPerfilMensagem {
+        display: flex;
+        height: 8vh;
+        width: 8vh;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.MensagemComentario .Analise h4 {
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+@media screen and (max-width: 768px) {
+    .MensagemComentario {
+        display: flex;
+        min-height: 15vh;
+        background-color: white;
+        border-radius: 1vh;
+
+        .FotoPerfilMensagem {
+            display: flex;
+            height: 8vh;
+            width: 8vh;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            overflow: hidden;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .AlinhadorMensagem {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}

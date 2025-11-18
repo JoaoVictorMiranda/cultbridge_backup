@@ -1,0 +1,146 @@
+.SessaoComentarios {
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10vh;
+    flex-direction: column;
+
+    .SessaoComentariosConteudo {
+        display: flex;
+        width: 60%;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: white;
+    }
+
+    .SessaoComentariosTitulo {
+        display: flex;
+        color: white;
+    }
+
+    .BlocoVermelho {
+        display: flex;
+        background-color: red;
+        width: 10%;
+        border-radius: 0.5vh;
+        height: 0.5vh;
+    }
+
+    .ComentariosIsolados {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: auto;
+        width: 100%;
+        gap: 1.5vh;
+        margin-bottom: 5vh;
+    }
+
+    h1 {
+        width: 50%;
+        text-align: center;
+        justify-self: center;
+        position: absolute;
+    }
+
+    button {
+        width: 15%;
+        height: 4.5vh;
+        cursor: pointer;
+        border-radius: 1vh;
+        outline: none;
+        transition: all 0.5s;
+        font-size: 1.8vh;
+        font-weight: 700;
+        border: none;
+        background-color: #5A0001;
+        color: white;
+        margin-top: 5vh;
+    }
+
+    button:hover {
+        display: flex;
+        transform: scale(1.1);
+        align-items: center;
+        justify-content: center;
+        background-color: #410102;
+    }
+
+    .ComentarioContainer {
+        position: relative;
+    }
+
+    .MenuComentario {
+        position: absolute;
+        top: 100%;
+        right: 2vh;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1vh;
+        background-color: rgba(20, 20, 20, 0.95);
+        border: 1px solid #5A0001;
+        border-radius: 1vh;
+        padding: 1.5vh;
+        box-shadow: 0 0.8vh 2vh rgba(0, 0, 0, 0.6);
+        animation: fadeIn 0.2s ease-in-out;
+        z-index: 20;
+        min-width: 15vh;
+    }
+
+    .MenuLink {
+        text-decoration: none;
+        color: white;
+        background-color: #5A0001;
+        padding: 1vh 1.5vh;
+        border-radius: 0.8vh;
+        font-size: 1.6vh;
+        font-weight: 700;
+        text-align: center;
+        transition: all 0.25s ease-in-out;
+        border: none;
+        cursor: pointer;
+
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-0.5vh);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .SessaoComentarios {
+        .SessaoComentariosConteudo {
+            width: 90%;
+        }
+
+        .ComentariosIsolados {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .MenuComentario {
+            right: 0;
+            left: 0;
+            margin: auto;
+            width: 70%;
+            padding: 1.2vh;
+            gap: 0.8vh;
+        }
+
+        .MenuLink {
+            font-size: 1.5vh;
+            padding: 1.2vh;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.Alinhador {
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 2vh;
+
+    .Titulo {
+        display: flex;
+        font-size: 3.5vh;
+        font-weight: 700;
+        color: white;
+    }
+
+    .Bloco {
+        display: flex;
+        width: 10vh;
+        margin-top: 0.5vh;
+        height: 0.6vh;
+        background-color: red;
+        border-radius: 1vh;
+    }
+}

@@ -1,0 +1,191 @@
+.painel-login {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../../assets/images/BackgroundFilmes.png);
+    background-size: cover;
+    background-position: center;
+
+    .formulario-login {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        min-width: 40%;
+        margin-top: 10vh;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #111111;
+        padding: 6vh 4vh;
+        border-radius: 3vh;
+        box-shadow: 0 0.5vh 2vh rgba(0, 0, 0, 0.4);
+
+        h1 {
+            text-align: center;
+            color: #FFFFFF;
+            margin-bottom: 5vh;
+            font-size: 4vh;
+            font-weight: 600;
+        }
+
+        .grupo-input {
+            margin-bottom: 3vh;
+
+            label {
+                display: block;
+                color: #A7A9A9;
+                font-size: 1.8vh;
+                margin-bottom: 1vh;
+            }
+
+            input {
+                width: 100%;
+                padding: 1.5vh 2vh;
+                background: #1D1D1D;
+                border: none;
+                border-radius: 1vh;
+                color: #FFFFFF;
+                font-size: 2vh;
+
+                &::placeholder {
+                    color: #A7A9A9;
+                }
+            }
+        }
+
+        .links-ajuda {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 3vh;
+
+            a {
+                color: #ffffff;
+                text-decoration: none;
+                font-size: 1.8vh;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .botao-login {
+            width: 100%;
+            padding: 2vh;
+            background: #CB1B25;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 1vh;
+            font-size: 2vh;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 3vh;
+            transition: 0.2s;
+
+            &:hover {
+                background: #5a0001;
+            }
+        }
+
+        .divider {
+            text-align: center;
+            color: #A0AEC0;
+            margin: 3vh 0;
+            font-size: 1.8vh;
+            position: relative;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                width: 40%;
+                height: 1px;
+                background: #4A5568;
+            }
+
+            &::before {
+                left: 0;
+            }
+
+            &::after {
+                right: 0;
+            }
+        }
+
+        .social-login {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3vh;
+
+            button {
+                background: white;
+                color: black;
+                font-weight: 600;
+                border-radius: 1vh;
+                padding: 1.5vh 3vh;
+                border: none;
+                cursor: pointer;
+                font-size: 2vh;
+                transition: 0.3s;
+
+                &:hover {
+                    background: #f0f0f0;
+                }
+            }
+        }
+
+        .botao-retorno {
+            width: 100%;
+            padding: 2vh;
+            background: #FFFFFF;
+            border: 1px solid transparent;
+            border-radius: 3vh;
+            color: black;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 2vh;
+            transition: 0.2s;
+
+            &:hover {
+                border-color: #5a0001;
+                color: #5a0001;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .painel-login {
+        padding: 4vh 2vh;
+
+        .formulario-login {
+            width: 90%;
+            padding: 4vh 3vh;
+            margin-top: 8vh;
+
+            h1 {
+                font-size: 3.5vh;
+            }
+
+            .links-ajuda {
+                flex-direction: column;
+                gap: 1.5vh;
+                text-align: center;
+            }
+
+            .social-login {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .botao-login,
+            .botao-retorno {
+                font-size: 1.8vh;
+                padding: 1.8vh;
+            }
+        }
+    }
+}
