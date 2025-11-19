@@ -7,7 +7,7 @@ const api = express();
 
 
 api.use(cors({
-    origin: ['http://localhost:5173']
+    origin: ['https://cultbridge-site.onrender.com/']
 }));
 
 
